@@ -1,4 +1,6 @@
-import Component from "../js/components/Component.js";
+import ComponentConstructor from "./js/components/ComponentConstructor";
+
+const parentElement = document.querySelector(".container");
 
 // eslint-disable-next-line no-new
-new Component(".container", "", "");
+new ComponentConstructor("div", ".hola", parentElement);

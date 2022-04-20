@@ -1,7 +1,7 @@
-class Component {
+class ComponentConstructor {
   element;
 
-  constructor(parentElement, tag, className) {
+  constructor(tag, className, parentElement) {
     this.element = document.createElement(tag);
     this.element.className = className;
     parentElement.append(this.element);
@@ -251,4 +251,4 @@ class Component {
   }
 }
 
-export default Component;
+export default ComponentConstructor;
