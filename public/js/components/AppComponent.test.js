@@ -1,3 +1,4 @@
+/* eslint-disable no-new */
 import AppComponent from "./AppComponent";
 
 describe("Given a AppComponent component", () => {
