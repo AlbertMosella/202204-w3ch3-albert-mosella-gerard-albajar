@@ -1,4 +1,4 @@
-import Component from "../Component/Component.js";
+import Component from "./Component";
 
 class CardComponent extends Component {
   constructor(parentElement, seriesName) {
