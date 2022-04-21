@@ -20,7 +20,7 @@ class SerieComponent extends Component {
       <img
         class="serie__poster"
         src="${this.poster}"
-        alt="The Sopranos poster"
+        alt="${this.name} poster"
       />
       <h4 class="serie__title">${this.name}</h4>
       <p class="serie__info">${this.creator}(${this.year})</p>
