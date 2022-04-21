@@ -1,5 +1,6 @@
 /* eslint-disable no-new */
 import Component from "./Component.js";
+import DynamicPharagraph from "./DynamicPharagraph.js";
 import SerieComponent from "./SerieComponent.js";
 
 class AppComponent extends Component {
@@ -8,7 +9,10 @@ class AppComponent extends Component {
     super(parentElement, "div", "container");
     this.series = series;
     this.render();
-    this.showMySerie();
+    this.dynamicPharagraph();
+    this.watchedSeries();
+    this.dynamicPharagraph2();
+    this.unWatchedSeries();
   }
 
   render() {
@@ -19,25 +23,47 @@ class AppComponent extends Component {
         <section class="series">
           <h2 class="section-title">Series list</h2>
           <section class="series-pending">
-            <h3 class="subsection-title">Pending series</h3>
-            <p class="info">You have 4 series pending to watch</p>
+            
             <!--<p class="info">Congrats! You've watched all your series</p>-->
             <ul class="series-list">
               
             </ul>
           </section>
+          <h2 class="section-title-2"></h2>
           <section class="series-watched">
-            
+
+            <!--<p class="info">Congrats! You've watched all your series</p>-->
+            <ul class="series-list-2">
+
+            </ul>
           </section>
         </section>
       </main>`;
   }
 
-  showMySerie() {
+  dynamicPharagraph() {
+    const myTitle = document.querySelector(".section-title");
+    new DynamicPharagraph(myTitle, this.series);
+  }
+
+  dynamicPharagraph2() {
+    const myTitle = document.querySelector(".section-title-2");
+    new DynamicPharagraph(myTitle, this.series);
+  }
+
+  unWatchedSeries() {
     const mySeries = document.querySelector(".series-list");
 
     this.series.forEach((serie) => {
       new SerieComponent(mySeries, { ...serie });
+    });
+  }
+
+  watchedSeries() {
+    const myUnwatchedSeries = document.querySelector(".series-list-2");
+
+    this.series.forEach((serie) => {
+      new SerieComponent(myUnwatchedSeries, { ...serie });
     });
   }
 }
