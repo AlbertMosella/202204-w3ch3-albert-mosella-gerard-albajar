@@ -1,6 +1,6 @@
 import AppComponent from "./js/components/AppComponent.js";
+import series from "./js/series.js";
 
 const { body } = document;
 
-// eslint-disable-next-line no-new
-new AppComponent(body);
+new AppComponent(body, series);
