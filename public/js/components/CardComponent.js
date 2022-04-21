@@ -1,12 +1,12 @@
 import Component from "./Component";
 
 class CardComponent extends Component {
-  constructor(parentElement, seriesName) {
+  constructor(parentElement, { name, creator, year, poster }) {
     super(parentElement, "li", "serie");
-    this.seriesName = seriesName.name;
-    this.seriesCreator = seriesName.creator;
-    this.seriesYear = seriesName.year;
-    this.seriesPoster = seriesName.poster;
+    this.seriesName = name;
+    this.seriesCreator = creator;
+    this.seriesYear = year;
+    this.seriesPoster = poster;
     this.render();
   }
 
