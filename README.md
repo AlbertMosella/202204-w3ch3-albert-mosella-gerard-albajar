@@ -5,4 +5,4 @@
 -Component Pending/Watched Series
 -Component Dinamic Text Series Counter
 -Component Serie
--Component Stars rating
+-Component Stars Rating
