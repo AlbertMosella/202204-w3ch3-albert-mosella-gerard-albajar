@@ -1,11 +1,9 @@
 import Component from "./Component.js";
 
 class AppComponent extends Component {
-  element;
-
   constructor(parentElement) {
     super(parentElement, "div", "container");
-    this.element = document.createElement("div");
+
     this.render();
   }
 
