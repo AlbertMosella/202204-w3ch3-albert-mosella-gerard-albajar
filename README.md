@@ -3,7 +3,6 @@
 ##Components List
 
 -AppComponent
-·Crea un contenedor para las series
 ·Muestra titulo de la pagina
 ·Almacena listado de series
 ·Muestra tantos componentes SerieComponent como series tenga
