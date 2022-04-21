@@ -1,11 +1,11 @@
-class ComponentConstructor {
+import Component from "./Component.js";
+
+class AppComponent extends Component {
   element;
 
-  constructor(tag, className, parentElement) {
-    this.element = document.createElement(tag);
-    this.element.className = className;
-    parentElement.append(this.element);
-
+  constructor(parentElement) {
+    super(parentElement, "div", "container");
+    this.element = document.createElement("div");
     this.render();
   }
 
@@ -251,4 +251,4 @@ class ComponentConstructor {
   }
 }
 
-export default ComponentConstructor;
+export default AppComponent;
