@@ -1,4 +1,4 @@
-import ComponentConstructor from "./js/components/ComponentConstructor";
+import ComponentConstructor from "./js/components/ComponentConstructor.js";
 
 const parentElement = document.querySelector(".container");
 
